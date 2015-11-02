@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rails Cookbook</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="bg">
+  <img src="https://farm1.staticflickr.com/485/18774862551_8913357fcd.jpg" alt="">
+</div>
+  <div class='title_bar'>
+    <!-- <img src="http://www.leilappetit.com/blog/wp-content/uploads/2015/07/cropped-NEW-400-x-200.png?e80df2"> -->
+    <p><%= link_to('Categories', categories_path) %>    |            <%= link_to('All Recipes', recipes_path) %>    |     <%= link_to('Ingredients', ingredients_path) %>   |    <%= link_to('Foodtypes', foodtypes_path) %>      </p>
+  </div>
+
+
+
+
+  <%= yield %>
+
+ 
+
+  <footer class='footer'>
+   <%= link_to('New Category', new_category_path) %>    |    <%= link_to('New Recipe', new_recipe_path) %>    |    <%= link_to('New Ingredient', new_ingredient_path) %>   |    <%= link_to('New Foodtype', new_foodtype_path) %>
+
+   
+
+  </footer>
+
+</body>
+</html>
